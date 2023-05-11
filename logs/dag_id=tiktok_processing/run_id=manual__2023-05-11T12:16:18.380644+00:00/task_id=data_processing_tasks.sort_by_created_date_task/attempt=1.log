@@ -1,0 +1,17 @@
+[2023-05-11T12:16:30.683+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=tiktok_processing/run_id=manual__2023-05-11T12:16:18.380644+00:00/task_id=data_processing_tasks.sort_by_created_date_task permission to 509
+[2023-05-11T12:16:30.780+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=tiktok_processing/run_id=manual__2023-05-11T12:16:18.380644+00:00/task_id=data_processing_tasks.sort_by_created_date_task permission to 509
+[2023-05-11T12:16:30.923+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiktok_processing.data_processing_tasks.sort_by_created_date_task manual__2023-05-11T12:16:18.380644+00:00 [queued]>
+[2023-05-11T12:16:30.958+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiktok_processing.data_processing_tasks.sort_by_created_date_task manual__2023-05-11T12:16:18.380644+00:00 [queued]>
+[2023-05-11T12:16:30.960+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-11T12:16:31.013+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): data_processing_tasks.sort_by_created_date_task> on 2023-05-11 12:16:18.380644+00:00
+[2023-05-11T12:16:31.036+0000] {standard_task_runner.py:57} INFO - Started process 364 to run task
+[2023-05-11T12:16:31.044+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'tiktok_processing', 'data_processing_tasks.sort_by_created_date_task', 'manual__2023-05-11T12:16:18.380644+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/task_7_1.py', '--cfg-path', '/tmp/tmpahhe_oh2']
+[2023-05-11T12:16:31.052+0000] {standard_task_runner.py:85} INFO - Job 35: Subtask data_processing_tasks.sort_by_created_date_task
+[2023-05-11T12:16:31.156+0000] {logging_mixin.py:149} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:188 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-05-11T12:16:31.470+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=tiktok_processing/run_id=manual__2023-05-11T12:16:18.380644+00:00/task_id=data_processing_tasks.sort_by_created_date_task permission to 509
+[2023-05-11T12:16:31.582+0000] {task_command.py:410} INFO - Running <TaskInstance: tiktok_processing.data_processing_tasks.sort_by_created_date_task manual__2023-05-11T12:16:18.380644+00:00 [running]> on host 4cbbfdc565be
+[2023-05-11T12:16:33.644+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiktok_processing' AIRFLOW_CTX_TASK_ID='data_processing_tasks.sort_by_created_date_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-11T12:16:18.380644+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-11T12:16:18.380644+00:00'
+[2023-05-11T12:17:06.454+0000] {python.py:183} INFO - Done. Returned value was: /opt/***/data/sorted_tiktok_without_nulls.csv
+[2023-05-11T12:17:07.015+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=tiktok_processing, task_id=data_processing_tasks.sort_by_created_date_task, execution_date=20230511T121618, start_date=20230511T121630, end_date=20230511T121707
+[2023-05-11T12:17:07.154+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-11T12:17:07.229+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,19 @@
+[2023-05-11T13:31:19.874+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=test_mongo/run_id=manual__2023-05-11T13:22:51.472391+00:00/task_id=upload_to_mongodb_task_1 permission to 509
+[2023-05-11T13:31:19.919+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=test_mongo/run_id=manual__2023-05-11T13:22:51.472391+00:00/task_id=upload_to_mongodb_task_1 permission to 509
+[2023-05-11T13:31:19.978+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_mongo.upload_to_mongodb_task_1 manual__2023-05-11T13:22:51.472391+00:00 [queued]>
+[2023-05-11T13:31:19.997+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_mongo.upload_to_mongodb_task_1 manual__2023-05-11T13:22:51.472391+00:00 [queued]>
+[2023-05-11T13:31:19.998+0000] {taskinstance.py:1331} INFO - Starting attempt 2 of 2
+[2023-05-11T13:31:20.043+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): upload_to_mongodb_task_1> on 2023-05-11 13:22:51.472391+00:00
+[2023-05-11T13:31:20.051+0000] {standard_task_runner.py:57} INFO - Started process 1632 to run task
+[2023-05-11T13:31:20.057+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'test_mongo', 'upload_to_mongodb_task_1', 'manual__2023-05-11T13:22:51.472391+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/try_connection_to_mongo.py', '--cfg-path', '/tmp/tmpy5qh0ybh']
+[2023-05-11T13:31:20.062+0000] {standard_task_runner.py:85} INFO - Job 44: Subtask upload_to_mongodb_task_1
+[2023-05-11T13:31:20.101+0000] {logging_mixin.py:149} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:188 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-05-11T13:31:20.162+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=test_mongo/run_id=manual__2023-05-11T13:22:51.472391+00:00/task_id=upload_to_mongodb_task_1 permission to 509
+[2023-05-11T13:31:20.170+0000] {task_command.py:410} INFO - Running <TaskInstance: test_mongo.upload_to_mongodb_task_1 manual__2023-05-11T13:22:51.472391+00:00 [running]> on host d8f273d8514c
+[2023-05-11T13:31:20.398+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test_mongo' AIRFLOW_CTX_TASK_ID='upload_to_mongodb_task_1' AIRFLOW_CTX_EXECUTION_DATE='2023-05-11T13:22:51.472391+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-11T13:22:51.472391+00:00'
+[2023-05-11T13:31:20.414+0000] {base.py:73} INFO - Using connection ID 'mongo_default' for task execution.
+[2023-05-11T13:31:20.623+0000] {logging_mixin.py:149} INFO - Connected to MongoDB - ['tiktok_collection']
+[2023-05-11T13:31:20.627+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-11T13:31:20.654+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=test_mongo, task_id=upload_to_mongodb_task_1, execution_date=20230511T132251, start_date=20230511T133119, end_date=20230511T133120
+[2023-05-11T13:31:20.711+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-11T13:31:20.742+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

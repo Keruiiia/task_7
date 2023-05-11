@@ -1,0 +1,20 @@
+[2023-05-11T11:07:04.717+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=tiktok_processing/run_id=manual__2023-05-11T11:06:58.528051+00:00/task_id=file_sensor permission to 509
+[2023-05-11T11:07:04.827+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=tiktok_processing/run_id=manual__2023-05-11T11:06:58.528051+00:00/task_id=file_sensor permission to 509
+[2023-05-11T11:07:04.930+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiktok_processing.file_sensor manual__2023-05-11T11:06:58.528051+00:00 [queued]>
+[2023-05-11T11:07:04.970+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiktok_processing.file_sensor manual__2023-05-11T11:06:58.528051+00:00 [queued]>
+[2023-05-11T11:07:04.971+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-11T11:07:05.091+0000] {taskinstance.py:1350} INFO - Executing <Task(FileSensor): file_sensor> on 2023-05-11 11:06:58.528051+00:00
+[2023-05-11T11:07:05.097+0000] {standard_task_runner.py:57} INFO - Started process 1879 to run task
+[2023-05-11T11:07:05.106+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'tiktok_processing', 'file_sensor', 'manual__2023-05-11T11:06:58.528051+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/task_7_1.py', '--cfg-path', '/tmp/tmpobqnfucf']
+[2023-05-11T11:07:05.109+0000] {standard_task_runner.py:85} INFO - Job 14: Subtask file_sensor
+[2023-05-11T11:07:05.162+0000] {logging_mixin.py:149} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:188 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-05-11T11:07:05.270+0000] {logging_mixin.py:149} INFO - Changing /opt/***/logs/dag_id=tiktok_processing/run_id=manual__2023-05-11T11:06:58.528051+00:00/task_id=file_sensor permission to 509
+[2023-05-11T11:07:05.280+0000] {task_command.py:410} INFO - Running <TaskInstance: tiktok_processing.file_sensor manual__2023-05-11T11:06:58.528051+00:00 [running]> on host 49e2673af856
+[2023-05-11T11:07:05.607+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiktok_processing' AIRFLOW_CTX_TASK_ID='file_sensor' AIRFLOW_CTX_EXECUTION_DATE='2023-05-11T11:06:58.528051+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-11T11:06:58.528051+00:00'
+[2023-05-11T11:07:05.632+0000] {base.py:73} INFO - Using connection ID 'fs_default' for task execution.
+[2023-05-11T11:07:05.636+0000] {filesystem.py:64} INFO - Poking for file /opt/***/data/tiktok_google_play_reviews.csv
+[2023-05-11T11:07:05.688+0000] {filesystem.py:69} INFO - Found File /opt/***/data/tiktok_google_play_reviews.csv last modified: 20230504102257
+[2023-05-11T11:07:05.688+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2023-05-11T11:07:05.709+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=tiktok_processing, task_id=file_sensor, execution_date=20230511T110658, start_date=20230511T110704, end_date=20230511T110705
+[2023-05-11T11:07:05.808+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-11T11:07:05.940+0000] {taskinstance.py:2674} INFO - 3 downstream tasks scheduled from follow-on schedule check
