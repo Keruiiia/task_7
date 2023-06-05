@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-import os
 import pandas as pd
 import re
 from airflow import DAG
@@ -16,7 +15,7 @@ default_args = {
     'retries': 0,
 }
 
-# filepath="tiktok_google_play_reviews.csv"
+
 
 
 def replace_null_values():
@@ -24,7 +23,7 @@ def replace_null_values():
     df.fillna('-', inplace=True)
     output_file_path = "/opt/airflow/data/tiktok_without_nulls.csv"
     df.to_csv(output_file_path, index=False)
-    return output_file_path
+
 
 
 def sort_by_created_date():
@@ -33,7 +32,7 @@ def sort_by_created_date():
     df = df.sort_values('created_date')
     output_file_path = "/opt/airflow/data/sorted_tiktok_without_nulls.csv"
     df.to_csv(output_file_path, index=False)
-    return output_file_path
+
 
 
 def clean_content_column():
@@ -42,7 +41,7 @@ def clean_content_column():
     df['content'] = df['content'].apply(lambda x: re.sub(pattern, '', x))
     output_file_path = "/opt/airflow/data/sorted_tiktok_without_nulls_and_emojis.csv"
     df.to_csv(output_file_path, index=False)
-    return output_file_path
+
 
 
 def upload_to_mongodb():
@@ -74,7 +73,6 @@ with DAG('tiktok_processing',
 
         clean_content_column_task = PythonOperator(task_id='clean_content_column_task',
                                                    python_callable=clean_content_column)
-        # return [replace_null_values_task, sort_by_created_date_task, clean_content_column_task]
 
 
     upload_to_mongodb_task = PythonOperator(task_id='upload_to_mongodb_task',
