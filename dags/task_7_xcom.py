@@ -22,12 +22,10 @@ def replace_null_values(**kwargs):
     output_file_path = "/home/keruiiia/airflow/data/tiktok_without_nulls.csv"
     df.to_csv(output_file_path, index=False)
     kwargs['ti'].xcom_push(key='output_file_path', value=output_file_path)
-    print(f"Saved output_file_path to XCom: {output_file_path}")
 
 
 def sort_by_created_date(**kwargs):
     input_file_path = kwargs['ti'].xcom_pull(key='output_file_path', task_ids='replace_null_values_task')
-    print(f"Retrieved output_file_path from XCom: {input_file_path}")
     df = pd.read_csv(input_file_path)
     df.rename(columns={'at': 'created_date'}, inplace=True)
     df = df.sort_values('created_date')
